@@ -4,14 +4,11 @@ import * as data from '$root/data/user.data';
 
 let id_data
 
-
-
 // Describe = seperti Suite in Qase.io
 describe('Createbooking', function() {
     //It = Test Case
     it('Should succesful create booking', async () => {
         const response = await restfulApi.createbooking(data.CREATE_BOOKING);          
-        console.log(response.data)
         id_data = response.data.bookingid
         assert.equal(response.status, 200);
         assert.isNumber(response.data.bookingid);

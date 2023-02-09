@@ -9,10 +9,8 @@ describe('GetAllIdBooking', function() {
     //It = Test Case
     it('Should succesful authentication', async () => {
         const response = await restfulApi.getallid();          
-        console.log(response.data)
         assert.equal(response.status, 200);     
         
-
     });
 
 })
