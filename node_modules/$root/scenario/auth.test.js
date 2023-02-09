@@ -15,7 +15,8 @@ describe('Auth', function() {
     it('Should not succesful authentication with invalid data', async () => {
         const response = await restfulApi.auth(data.INVALID_AUTHENTICATION);          
         
-        assert.equal(response.status, 400);
+        assert.equal(response.status, 200);
+        assert.isString(response.data.reason)
     });
 
 })

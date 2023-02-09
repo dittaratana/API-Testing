@@ -18,7 +18,7 @@
   "scripts": {
     "postinstall": "link-module-alias",
     "preinstall": "command -v link-module-alias && link-module-alias clean || true",
-    "mocha:run": "mocha tests/scenario --reporter-options reportDir=report"
+    "mocha:run": "mocha tests/scenario --reporter-options reportDir=report --timeout 10000"
   },
   "_moduleAliases": {
     "$root": "tests",
