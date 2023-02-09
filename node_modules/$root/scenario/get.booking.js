@@ -15,8 +15,8 @@ describe('getbooking', function() {
         const param1 = data.userParam['firstname'];
         const param2 = data.userParam['lastname'];
         const response = await restfulApi.getbookinguser(param1,param2);
-        console.log(response.data)
-        console.log(param1,param2)
+        // console.log(response.data)
+        // console.log(param1,param2)
         assert.equal(response.status, 200);
         
     
@@ -25,7 +25,7 @@ describe('getbooking', function() {
     it('Should succesfully get list users by ID', async() => {
         const param = getParams(await idBooking());
         const response = await restfulApi.getbooking(param);
-        console.log(response.data)
+        // console.log(response.data)
         assert.equal(response.status, 200);
     
     })
