@@ -27,6 +27,7 @@ export const INVALID_AUTH = {
 }
 
 
+
 export const VALID_PARAMS = {
     "type": "object",
     "default": {},
@@ -92,4 +93,57 @@ export const VALID_PARAMS = {
             }
         }
     }
+}
+
+export const ValidParamsId = {
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "firstname",
+        "lastname",
+        "totalprice",
+        "depositpaid",
+        "bookingdates"
+    ],
+    "properties": {
+        "firstname": {
+            "type": "string",
+            "default": "",
+
+        },
+        "lastname": {
+            "type": "string",
+            "default": "",
+           
+        },
+        "totalprice": {
+            "type": "integer",
+            "default": 0,
+         
+        },
+        "depositpaid": {
+            "type": "boolean",
+            "default": false,
+          
+        },
+        "bookingdates": {
+            "type": "object",
+            "default": {},
+            "properties": {
+                "checkin": {
+                    "type": "string",
+                    "default": "",
+                },
+                "checkout": {
+                    "type": "string",
+                    "default": "",
+                }
+            },
+            "examples": [{
+                "checkin": "2018-03-07",
+                "checkout": "2021-06-03"
+            }]
+        }
+    },
 }

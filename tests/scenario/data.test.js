@@ -3,7 +3,7 @@ import restfulApi from '$root/page/restful.api';
 import * as data from '$root/data/user.data';
 import * as schema from '$root/schema/list-user.schema'
 import jsonSchema from 'chai-json-schema';
-import * as booking from '$root/data/user.data'
+
 
 
 chai.use(jsonSchema);
@@ -76,12 +76,21 @@ describe('Create Booking', function() {
             
         });
     
-        // it("Create booking using valid type data", async () => {
-        //     const response = await RestfulAPI.createBooking(book.VALID_BOOKING_DATA);
-        //     // console.log(response.data)
-        //     bookingId = response.data.bookingid;
-        //     assert.equal(response.status, 200);
-        //     expect(response.data).to.be.jsonSchema(schema.VALID_BOOKING_DATA_PARAMS);
-        // });
+        it("Get Booking with ID", async () => {
+            const response = await restfulApi.getBookingById(bookingId);
+            console.log(response.data)
+            assert.equal(response.status, 200);
+            expect(response.data).to.be.jsonSchema(schema.ValidParamsId);
+        });
+
+        it("Get Booking with false ID ", async () => {
+            const response = await restfulApi.getBookingById(1234567890);
+            console.log(response.data)
+            assert.equal(response.status, 404);
+            
+        });
     
+        it("Get Booking with filter username and lastname", async () => {
+            const response = await restfulApi.
+        })
 })
