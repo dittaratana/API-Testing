@@ -1,39 +1,46 @@
-export const VALID_AUTHENTICATION = {
+export const validAuthentication = {
     "username" : "admin",
     "password" : "password123"
 }
 
-export const INVALID_AUTHENTICATION = {
+export const invalidAuthentication = {
     "username" : "siapa",
     "password" : "passwords"
 }
 
+export const InvalidAuthenticationEmptyUsername = {
+    "username" : "",
+    "password" : ["password123"]
+}
+
+export const InvalidAuthenticationEmptyPassword = {
+    "username" : "admin",
+    "password" : ""
+}
+
+export const InvalidEmpty = {
+    "username" : "",
+    "password" : ""
+}
+
+export const invalidResponse = {
+    "reason" : "Bad credentials"
+}
+
+
+export const validToken = {
+    "token" : "8b1b339a053fdf6"
+}
+
 export const CREATE_BOOKING = {
-    "firstname" : "Andyan",
-    "lastname" : "Intelix",
-    "totalprice" : 12345,
+    "firstname" : "Jim",
+    "lastname" : "Brown",
+    "totalprice" : 111,
     "depositpaid" : true,
     "bookingdates" : {
-        "checkin" : "2018-01-05",
-        "checkout" : "2018-01-06"
+        "checkin" : "2018-01-01",
+        "checkout" : "2019-01-01"
     },
     "additionalneeds" : "Breakfast"
-}
-
-export const userDate = {
-    "checkin" : "2018-01-05",
-    "checkout": "2019-01-06"
-}
-
-export const userParam ={
-    "firstname" : "Andyan",
-    "lastname"  : "Intelix"
-}
-
-export const VALID_ID ={
-    id: "8841"
-}
-
-export const INVALID_ID = {
-    id: "22000000"
-}
+    }
+    

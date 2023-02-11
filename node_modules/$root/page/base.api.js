@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import axios from 'axios';
 
+
 dotenv.config();
 
 const BaseAPI = axios.create({
@@ -8,6 +9,7 @@ const BaseAPI = axios.create({
     headers: {
         "content-type": "application/json",
         "accept": "*/*"
+        
     },
     validateStatus: function (){
         return true;
