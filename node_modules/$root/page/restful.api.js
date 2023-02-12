@@ -6,9 +6,9 @@ import authApi from './authApi';
 const restfulApi = {
     auth: (data) => BaseAPI.post('/auth', data),
     createBooking: (data) => authApi.post('/booking', data),
-    getallid: (data) => authApi.get('/booking', data),
     getBookingById: (id) => authApi.get(`/booking/${id}`),
-    getBookingByByFilter: (param) => auth.get(`/booking`, {param}),
+    getallid: (data) => authApi.get('/booking', data),
+    getBookingByFilter: (param) => authApi.get(`/booking`, {param}),
     healthcheck: () => BaseAPI.get('/ping'),
     
 }
