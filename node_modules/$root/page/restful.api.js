@@ -9,6 +9,7 @@ const restfulApi = {
     getBookingById: (id) => authApi.get(`/booking/${id}`),
     getallid: (data) => authApi.get('/booking', data),
     getBookingByFilter: (param) => authApi.get(`/booking`, {param}),
+    getBookingByFilter1: (param) => authApi.get(`/booking?firstname=${param}&lastname=${param}`),
     healthcheck: () => BaseAPI.get('/ping'),
     
 }
