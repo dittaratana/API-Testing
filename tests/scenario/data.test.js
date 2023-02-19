@@ -91,7 +91,7 @@ describe('Create Booking', function() {
         });
     
         it("Get Booking with filter username and lastname", async () => {
-            const response = await restfulApi.getBookingByFilter(data.FilterName);
+            const response = await restfulApi.getBookingByFilter1(data.FilterName);
             console.log(response.data)
             assert.equal(response.status, 200)
             expect(response.data).to.be.jsonSchema(schema.ValidFilterName)

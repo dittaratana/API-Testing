@@ -147,3 +147,8 @@ export const ValidParamsId = {
         }
     },
 }
+
+export const ValidFilterName = {
+    "type": "array",
+    "default": [],
+}

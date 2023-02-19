@@ -44,3 +44,7 @@ export const CREATE_BOOKING = {
     "additionalneeds" : "Breakfast"
     }
     
+export const FilterName = {
+    "firstname" : "Jim",
+    "lastname" : "Brown"
+}
